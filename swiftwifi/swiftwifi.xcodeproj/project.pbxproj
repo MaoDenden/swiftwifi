@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		021481221BC631B1008F8630 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021481211BC631B1008F8630 /* AppDelegate.swift */; };
-		021481241BC631B1008F8630 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021481231BC631B1008F8630 /* ViewController.swift */; };
 		021481271BC631B1008F8630 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 021481251BC631B1008F8630 /* Main.storyboard */; };
 		021481291BC631B1008F8630 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 021481281BC631B1008F8630 /* Assets.xcassets */; };
 		0214812C1BC631B1008F8630 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0214812A1BC631B1008F8630 /* LaunchScreen.storyboard */; };
 		021481371BC631B1008F8630 /* swiftwifiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021481361BC631B1008F8630 /* swiftwifiTests.swift */; };
 		021481421BC631B1008F8630 /* swiftwifiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021481411BC631B1008F8630 /* swiftwifiUITests.swift */; };
+		02F082181BCBA34900545F0C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F082171BCBA34900545F0C /* ViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		0ABAA6D12DE3114378CFBC64 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFE3BA67FF84C6C15567AA60 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,7 +37,6 @@
 /* Begin PBXFileReference section */
 		0214811E1BC631B1008F8630 /* swiftwifi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swiftwifi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		021481211BC631B1008F8630 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		021481231BC631B1008F8630 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../ViewController.swift; sourceTree = "<group>"; };
 		021481261BC631B1008F8630 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		021481281BC631B1008F8630 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0214812B1BC631B1008F8630 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -48,6 +47,7 @@
 		0214813D1BC631B1008F8630 /* swiftwifiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = swiftwifiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		021481411BC631B1008F8630 /* swiftwifiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftwifiUITests.swift; sourceTree = "<group>"; };
 		021481431BC631B1008F8630 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		02F082171BCBA34900545F0C /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = swiftwifi/ViewController.swift; sourceTree = SOURCE_ROOT; };
 		8F99B3AEA8D8925E3419EFD4 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		CFE3BA67FF84C6C15567AA60 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0CD031A766380E93858FFA2 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -137,7 +137,7 @@
 		0214814F1BC673E2008F8630 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				021481231BC631B1008F8630 /* ViewController.swift */,
+				02F082171BCBA34900545F0C /* ViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -370,7 +370,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				021481241BC631B1008F8630 /* ViewController.swift in Sources */,
+				02F082181BCBA34900545F0C /* ViewController.swift in Sources */,
 				021481221BC631B1008F8630 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
