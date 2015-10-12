@@ -14,6 +14,7 @@
 		0214812C1BC631B1008F8630 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0214812A1BC631B1008F8630 /* LaunchScreen.storyboard */; };
 		021481371BC631B1008F8630 /* swiftwifiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021481361BC631B1008F8630 /* swiftwifiTests.swift */; };
 		021481421BC631B1008F8630 /* swiftwifiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021481411BC631B1008F8630 /* swiftwifiUITests.swift */; };
+		0ABAA6D12DE3114378CFBC64 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFE3BA67FF84C6C15567AA60 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,9 @@
 		0214813D1BC631B1008F8630 /* swiftwifiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = swiftwifiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		021481411BC631B1008F8630 /* swiftwifiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftwifiUITests.swift; sourceTree = "<group>"; };
 		021481431BC631B1008F8630 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8F99B3AEA8D8925E3419EFD4 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		CFE3BA67FF84C6C15567AA60 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0CD031A766380E93858FFA2 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0ABAA6D12DE3114378CFBC64 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +86,8 @@
 				021481351BC631B1008F8630 /* swiftwifiTests */,
 				021481401BC631B1008F8630 /* swiftwifiUITests */,
 				0214811F1BC631B1008F8630 /* Products */,
+				4719CDDB29F1B56737108167 /* Pods */,
+				80120C4D04ED5F503770E7EC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -165,6 +172,23 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		4719CDDB29F1B56737108167 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8F99B3AEA8D8925E3419EFD4 /* Pods.debug.xcconfig */,
+				F0CD031A766380E93858FFA2 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		80120C4D04ED5F503770E7EC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CFE3BA67FF84C6C15567AA60 /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -172,9 +196,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 021481461BC631B1008F8630 /* Build configuration list for PBXNativeTarget "swiftwifi" */;
 			buildPhases = (
+				410A324AA8934F2D117FC336 /* Check Pods Manifest.lock */,
 				0214811A1BC631B1008F8630 /* Sources */,
 				0214811B1BC631B1008F8630 /* Frameworks */,
 				0214811C1BC631B1008F8630 /* Resources */,
+				03736142BEC1362AFB0774D7 /* Embed Pods Frameworks */,
+				8C1A30D0A85DC4D30B0E6055 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -289,6 +316,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		03736142BEC1362AFB0774D7 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		410A324AA8934F2D117FC336 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8C1A30D0A85DC4D30B0E6055 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0214811A1BC631B1008F8630 /* Sources */ = {
@@ -436,6 +511,7 @@
 		};
 		021481471BC631B1008F8630 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F99B3AEA8D8925E3419EFD4 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = swiftwifi/Info.plist;
@@ -447,6 +523,7 @@
 		};
 		021481481BC631B1008F8630 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F0CD031A766380E93858FFA2 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = swiftwifi/Info.plist;
